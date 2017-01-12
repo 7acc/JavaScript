@@ -1,0 +1,22 @@
+#para1{
+    font-family: "Times New Roman";
+    color: black;
+    font-size: larger; //^^
+}
+#para2,#para3{
+    font-family: Arial;
+    color: darkgray;
+}
+
+#main2{
+    display: table;
+}
+#hiddenText{
+    background-color: green;
+}
+#main2 label{
+    display: table-cell;
+}
+#main2 input{
+    display: table-cell;
+}

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+
+</head>
+<body ng-app="MediaApp">
+    <div ng-controller="MediaController">
+
+        <button type="button" id="viewProducts" ng-click="ListProducts()">List Products</button>
+        <button type="button" id="viewBooks" ng-click="ListBooks()">List Books</button>
+        <button type="button" id="viewAddBook" ng-click="">Add Product</button>
+
+        <table id="ProductDiv" ng-model="ProductTable"  class="repeater">
+            <thead>
+                <tr>
+                    <th>Products</th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Article Number</th>
+                </tr>
+            </thead>
+            <tr ng-repeat="product in Products | orderBy: 'Category'">
+                <td>{{product.Name}}</td>
+                <td>{{product.Category}}</td>
+                <td>{{product.Price}}</td>
+                <td>{{product.ArticleNR}}</td>
+            </tr>
+        </table>
+
+        <table id="BookDiv" ng-model="BooksTable" ng-init="ListBooks()" class="repeater">
+            <thead>
+                <tr>
+                    <th>Books</th>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>Article Number</th>
+                </tr>
+            </thead>
+            <tr ng-repeat="book in Books | orderBy: 'Title'">
+                <td>{{book.Title}}</td>
+                <td>{{book.Author}}</td>
+                <td>{{book.Price}}</td>
+                <td>{{book.ArticleNR}}</td>
+            </tr>
+        </table>
+
+        <div id="AddDiv"ng-model="AddBook">
+            <h2>Add New Book</h2>
+            <input type="text" placeholder="Title" ng-model="BookTitle"/><br/>
+            <input type="text" placeholder="Author" ng-model="BookAuthor"/><br/>
+            <input type="text" placeholder="Category" ng-model="BookCategory"/><br/>
+            <input type="number" placeholder="Price" ng-model="BookPrice"/><br/>
+            <input type="number" placeholder="ArtNR" ng-model="BookArtNR"/><br/>
+            <button type="button" ng-click="AddBook()">Add Book</button>
+
+        </div>
+
+    </div>
+
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="Scripts/Hider.js"></script>
+    <script src="Scripts/typings/MyTs/Product.js"></script>
+    <script src="Scripts/typings/MyTs/Book.js"></script>
+    <script src="Scripts/typings/MyTs/DVD.js"></script>
+    <script src="Scripts/typings/MyTs/Game.js"></script>
+    <script src="Scripts/typings/MyTs/Main.js"></script>
+    <script src="Scripts/typings/MyTs/Library.js"></script>
+
+</body>
+
+</html>
+

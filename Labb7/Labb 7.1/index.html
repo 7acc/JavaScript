@@ -1,0 +1,31 @@
+﻿
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Labb 7.1</title>
+    <meta charset="utf-8"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="Scripts/Converter.js"></script>
+
+    
+</head>
+
+<body ng-app="Converter">
+
+    <div ng-controller="ConverterController">
+        <input type="number" placeholder="Swedish Crowns" ng-model="SweInput"/>
+        <input type="number" placeholder="European Euros" ng-model="EuInput"/><br/>
+
+        <button type="button" ng-click="ConvertSwe()">Convert Sek To Euro</button>
+        <button type="button" ng-click="ConvertEu()">Convert Euro To Sek</button>
+
+
+        <div name="Result">{{Result}}</div>    
+    </div>
+   
+</body>
+</html>

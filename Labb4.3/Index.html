@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html data-ng-app="minApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/carControllerFile.js"></script>
+
+
+</head>
+<body>
+
+ <div data-ng-controller="carController">
+
+    <ul>
+        <li ng-repeat="car in cars | orderby: 'Brand'">{{car.Brand}} - {{car.Model}}</li>
+    </ul>
+
+   </div>
+</body>
+</html>

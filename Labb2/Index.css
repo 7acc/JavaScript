@@ -1,0 +1,13 @@
+
+#formen{
+    display: table;
+}
+#formen label {
+display: table-row;
+}
+#errorDiv{
+    width: 400px;
+}
+#hiddenText{
+    height: 200px;
+}

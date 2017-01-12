@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="JulLabb">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/Main.js"></script>
+
+
+</head>
+<body>
+
+<div ng-controller="LogInController" ng-init="GetStoredUser()">
+
+        <input type="text" placeholder="UserName" ng-model="userNameInput"/><br>
+        <input type="password" placeholder="PassWord" ng-model="PassWordInput"/><br>
+
+        <button ng-click="LogIn()">Login</button>
+
+        <label for="Rmbrme">Remember Me</label>
+        <input type="checkbox" id="RmbrMe" ng-model="loginRemember"/>
+
+        <p>{{LoginFail}}</p>
+</div>
+
+</body>
+</html>
